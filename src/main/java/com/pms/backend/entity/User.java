@@ -55,7 +55,7 @@ public class User implements UserDetails {
         return email;
     }
 
-    @OneToOne(mappedBy = "User")
+    @OneToOne(mappedBy = "user")
     private Student student;
 }
 

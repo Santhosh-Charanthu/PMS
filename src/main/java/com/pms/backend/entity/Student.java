@@ -1,5 +1,5 @@
 package com.pms.backend.entity;
-
+import java.util.List;
 import com.pms.backend.enums.Branch;
 import com.pms.backend.enums.Gender;
 import jakarta.persistence.*;
@@ -49,5 +49,8 @@ public class Student {
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
+
+    @OneToMany(mappedBy = "student")
+    private List<Application> applications;
 }
 
