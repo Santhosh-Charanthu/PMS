@@ -20,10 +20,8 @@ public class AuthenticationController {
     public AuthenticationResponse register(@Valid @RequestBody RegisterRequest request){
         return authenticationService.register(request);
     }
-
     @PostMapping("/login")
     public AuthenticationResponse login(@Valid @RequestBody LoginRequest request){
         return authenticationService.login(request);
     }
-
 }
