@@ -30,8 +30,8 @@ export default function LoginForm() {
     setLoading(true);
     try {
       await login(values);
-    } catch (err) {
-      toast.error(err.message || "Invalid email or password");
+    }catch (err) {
+        toast.error(err.response?.data || err.message);
     } finally {
       setLoading(false);
     }
